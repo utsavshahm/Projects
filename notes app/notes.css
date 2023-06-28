@@ -1,0 +1,79 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    width: max-content;
+    /* display: inline-block; */
+}
+.title{
+    display: flex;
+    flex-direction: column;
+}
+.brand{
+    background-color: rgba(255, 255, 57, 0.875);
+    font-family: Times;
+    padding: 5px;
+    width: fit-content;
+    margin-left: 7px;
+}
+
+
+.title h1{
+    font-size: 3rem;
+    font-weight: bolder;
+}
+.title p{
+    font-style: italic;
+}
+
+.sidebar{
+    display: flex;
+  
+    margin-top: 5px;
+    
+    padding: 2px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.btn{
+    margin: 5px;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 8px;
+    transition: background-color 0.5s;
+    font-size: 18px;
+    background: transparent ;
+    background-color: black;
+    color: white;
+}
+.btn:hover{
+    color: rgb(9, 9, 9);
+    background-color: rgb(255, 236, 61);
+    cursor: pointer;
+}
+
+
+main{
+    /* display: inline-block; */
+    margin-left: 7px;
+}
+.note-take{
+    background-color: rgba(255, 255, 0, 0.266);
+    
+    width: 800px;
+    border: 2px solid;
+    border-radius: 8px 12px 12px 8px;
+    font-size: 22px;
+    height: 435px;
+    padding: 15px;
+    
+}
+
+#save{
+    display: flex;
+    flex-flow: wrap;
+}

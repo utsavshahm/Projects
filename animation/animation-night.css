@@ -1,0 +1,165 @@
+body{
+    background-color: black;
+}
+.box{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.anim-box{
+    
+    height: 50px;
+    width: 10px;
+    background-color: blue;
+    position: relative;
+    top: 100px;
+    left: 100px;
+    animation-name: colorAnimate;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+
+
+.anim-box.first{
+    /* animation-duration: 1s; */
+
+    animation-delay: 0;
+}
+.anim-box.second{
+    /* animation-duration: 1s; */
+
+    animation-delay: 0.4s;
+}
+
+.anim-box.third{
+    /* animation-duration: 1s; */
+
+    animation-delay: 0.8s;
+}
+
+.anim-box.fourth{
+    /* animation-duration: 1s; */
+
+    animation-delay: 1.2s;
+}
+.anim-box.fifth{
+    /* animation-duration: 1s; */
+
+    animation-delay: 1.4s;
+}
+
+
+/*
+
+    @keyframes = Template before adding animation
+    @keyframes myName{
+
+        from{ //code }
+        to { //code }
+    }
+
+*/
+
+@keyframes colorAnimate{
+    0% {
+        transform: scale(0.5);
+        /* left: 100px; */
+        background-color: rgb(255, 0, 123);
+    }
+    25%{
+        /* height: 40px; */
+        transform: scale(1.5);
+        background-color: rgb(127, 255, 35);
+
+
+        /* left: 200px; */
+        /* background-color: red; */
+    }
+    50%{
+        transform: scale(2);
+
+        background-color: rgb(255, 0, 0);
+
+
+    }
+
+    /* Animation properties dalni hogi in div */
+
+}
+
+
+
+.anim1-box{
+    
+    height: 50px;
+    width: 10px;
+    background-color: rgb(205, 227, 56);
+    position: relative;
+    top: 100px;
+    left: 100px;
+    transition: all 0.5ms ;
+    
+    
+}
+
+
+
+.anim1-box.first:hover{
+    transform: scale(1.2);
+}
+.anim1-box.second:hover{
+    transform: scale(1.4);
+    
+}
+
+.anim1-box.third:hover{
+    transform: scale(1.6);
+    
+}
+
+.anim1-box.fourth:hover{
+    transform: scale(1.8);
+    
+}
+
+.btn{
+    position: relative;
+    top: 500px;
+    left: 100px;
+}
+button{
+    border: 2px solid;
+    border-radius: 12px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    font: 18px bolder;
+    transition: all 0.5s;
+
+    
+}
+button:hover{
+    /* animation:colorChange 1s ease-in infinite; */
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+
+}
+
+@keyframes colorChange {
+
+    from{
+        
+        border:0;
+    }
+    to{
+        transition: all 1s;
+        
+        border:3px solid orange
+
+    }
+    
+}

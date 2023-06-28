@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Utsav Shah">
+        <meta name="description" content="Notes App">
+        <meta name="robots" content="index, follow">
+        <link rel="stylesheet" href="notes.css">
+        <link rel="icon" href="/favicon.ico">
+        <link rel="icon" href="/favicon.svg">
+        <title>Notes app</title>
+        </head>
+    <body>
+        <header>
+            <div class="title">
+                
+                <div class="brand">
+                    <h1>Utsav's Notes</h1>
+                    <p>Your free Notes taking Online</p>
+                </div>
+                
+                <div class="sidebar">
+                    <div class="btn" id="create" onclick="newNote()">Create a Note</div>
+                    <div class="btn" id="starred-notes">Starred Notes</div>
+                    
+                </div>
+            </div>
+        </header>
+
+        <main>
+            
+            <div class="note-take" id="note-take">
+                Make a note!
+            </div>
+            <button class="btn" id="save-note" onclick="saveNote()">Save</button>
+            <button class="btn" id="addToStarred">Add to starred</button>
+        </main>
+
+        <div id="save" >
+
+        </div>
+        <footer>
+
+        </footer>
+
+        <script >
+            let flag=false;
+
+            
+            function saveNote(){
+
+                if(flag===false){
+                    alert('Please create a note to save it!');
+                }
+                else{
+                    console.log("hello");
+                    
+                    var savednote=document.createElement('div');
+
+                    const divStyle={
+                        'height':'100px',
+                        'width':'200px',
+                        'background-color':'rgba(255, 255, 0, 0.266)',
+                        // 'font-size':'18px',
+                        'border':'2px solid',
+                        'margin':'5px',
+                        'text-align':'center',
+                        
+                    }
+
+                    var head=document.getElementById('inpheadcrt').value;
+                    var des=document.getElementById('Note').value;
+
+                    const titleSaved=document.createElement('h4');
+                    titleSaved.innerText=head;
+
+                    
+                    titleSaved.setAttribute('style','margin:5px ; font-size:22px')
+                    const description=document.createElement('p');
+                    description.innerHTML=des;
+                    description.style.fontSize='12px';
+                    Object.assign(savednote.style,divStyle);
+
+                    savednote.setAttribute('id',head);
+                    savednote.setAttribute('class','saved');
+                    savednote.setAttribute('onclick','this.viewNote()');
+
+                    
+                    document.getElementById('save').appendChild(savednote);
+                    document.getElementById(head).appendChild(titleSaved);
+                    document.getElementById(head).appendChild(description);
+                   
+                }
+
+            }
+            function newNote(){
+                
+                document.getElementById('note-take').innerHTML='';
+                var titleOfNote=document.createElement('input');
+                titleOfNote.setAttribute('type','text');
+                titleOfNote.setAttribute('value','Add a Title');
+                titleOfNote.setAttribute('name','inpTitle');
+                titleOfNote.setAttribute('id','inpheadcrt');
+                titleOfNote.setAttribute('onclick','clearText()');
+                const titleStyle={
+                    'background':'transparent',
+                    "border":0,
+                    "fontSize":'30px',
+                    "fontWeight":'bold',
+                    "width":'inherit',
+                    'outline':0,
+                    'margin-bottom':'10px'
+
+                }
+                
+                let hr=document.createElement('hr');
+
+                var noteDesc=document.createElement('textarea');
+
+                noteDesc.setAttribute('id','Note');
+                noteDesc.setAttribute('onclick','clearText()');
+
+                const desStyle={
+                    'outline':0,
+                    'width':'inherit', 'height':'400px', 'background-color':'transparent', 'font-size':'20px', 'border':0, 'resize':'none'
+                }
+                
+                noteDesc.innerText='Start Writing...';
+                
+                Object.assign(titleOfNote.style,titleStyle);
+                Object.assign(noteDesc.style,desStyle);
+
+
+                document.getElementById('note-take').appendChild(titleOfNote);
+                document.getElementById('note-take').appendChild(hr);
+                document.getElementById('note-take').appendChild(noteDesc);
+
+                flag=true;
+                return flag;
+            }
+        </script>
+    </body>
+</html>

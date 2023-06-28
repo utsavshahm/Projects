@@ -1,0 +1,44 @@
+/* Media queries
+
+    ye cheez ye he ki jab screen ki size itni ho jaye to kuch CSS change krdo ya fir nayi add krdo whatever
+
+*/
+
+.box{
+    background-color: red;
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    /* display: none; */
+}
+
+
+/* Mtlb jab tak max-width=500px nahi hoti tab tak kuch nai hoga... jese hi hoga vese hi #box1 show krdo */
+@media  (max-width:300px){
+
+    #box1{
+        display: block;
+    }
+} 
+@media  (max-width:500px) and (min-width:500px){
+
+    #box2{
+        display: block;
+    }
+} 
+
+.parent{
+    display: flex;
+    gap: 10px;
+    flex-flow: wrap;
+}
+.new-box{
+    background-color: rgb(0, 47, 255);
+    color: white;
+    
+    height: 200px;
+    width: 200px;
+    font-size: 3rem;
+    text-align: center;
+    /* display: none; */
+}
