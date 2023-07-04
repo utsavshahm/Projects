@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@600&family=Lexend+Deca:wght@100&family=Raleway:wght@500&family=Varela+Round&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+::selection{
+    background-color: green;
+}
+.main{
+    display: grid;
+    height: 806px;
+    grid-template-rows: repeat(11,71px);
+    grid-template-columns: repeat(15,101px);
+    margin: 2px;
+    background-color: black;
+    font-family: 'Varela Round', sans-serif;
+    
+}
+.utils,.library,.container{
+    background-color: #2121217d;
+    border: 1px solid black;
+    border-radius: 5px;
+    
+    
+}
+.utils{
+    display: flex;
+    align-items: center;
+    
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    margin: 5px 5px 5px 10px;
+    /* background: white; */
+    color: white;
+    
+}
+
+.util-content{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10px;
+    
+}
+
+.icon{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 15px;
+
+    
+    
+}
+.icon img{
+    
+    height: 30px;
+    width: 30px;
+    padding: 5px;
+    margin: 0 5px;
+    border: 1px transparent;
+    border-radius: 50%;
+    transition: all 0.1s;
+    
+}
+img:hover{
+    background-color:rgb(35 35 35 / 56%);
+}
+.iconInfo{
+    font-size: 1.2rem;
+    margin-left: 10px;
+    color: #cccccc;
+    transition: all 0.5s;
+}
+.iconInfo:hover{
+    cursor: pointer;
+    color: white;
+}
+.library{
+    grid-row-start: 3;
+    grid-row-end: 11;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    margin: 0 5px 5px 10px;
+    overflow-y: scroll;
+    scrollbar-color: blue;
+
+}
+
+.head-playlist{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5px;
+}
+#plus{
+    position: relative;
+    right: -30px;
+}
+
+.playlist{
+    height: 75px;
+    width: auto;
+    display: flex;
+    align-items: center;
+}
+.thumbnail,.song-thumb{
+    height: 60px;
+    width: 60px;
+    background-size: cover;
+    margin: 0 15px;
+    border: 10px white;
+    border-radius: 10px;
+}
+.thumbnail.one{
+    background-image: url('playlist-thumb/likedsong.jpg');
+
+}
+.thumbnail.two{
+    background-image: url('playlist-thumb/icons8-browse-podcasts-32.png');
+
+}
+.thumbnail.three{
+    background-image: url('playlist-thumb/headphone.jpg');
+
+}
+.thumbnail.four{
+    background-image: url('playlist-thumb/astro.jpg');
+
+}
+.thumbnail.five{
+    background-image: url('playlist-thumb/gita.jpg');
+
+}
+.thumbnail.six{
+    background-image: url('playlist-thumb/khudgarz.jpg');
+
+}
+.thumbnail.seven{
+    background-image: url('playlist-thumb/abhas jha.jpg');
+}
+.thumbnail.eight{
+    background-image: url('playlist-thumb/anuvjain.jpg');
+}
+.thumbnail.nine{
+    background-image: url('playlist-thumb/atifaslam.jpg');
+}
+.playlist-content{
+    color: white;
+    font-size: 0.9rem;
+}
+
+.playlist:hover{
+    cursor: pointer;
+    background-color: rgb(35 35 35 / 56%);
+}
+.playlist:focus{
+    background-color: #4848487d;
+}
+
+.player{
+    grid-row-start: 11;
+    grid-row-end: 11;
+    grid-column-start: 1;
+    grid-column-end: 16;
+    width: 99%;
+    height: 75px;
+    background-color: black;
+    color: white;
+    padding-right:11px ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.songInfo{
+    display: flex;
+    height: 60px;
+    width: 260px;
+    /* border: 2px solid blue; */
+    margin-left: 10px;
+    margin-top: 15px;
+}
+.controls{
+    height: 60px;
+    width: 600px;
+    /* border: 2px solid blue; */
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon.control{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 0;
+}
+
+#play img{
+    background-color: white;
+}
+#play img:hover{
+    transform: scale(1.05);
+
+}
+.extracontrols{
+    height: 60px;
+    margin-right: -5px;
+    width: 260px;
+    /* border: 2px solid blue; */
+    display: flex;
+    align-items: center;
+}
+.soundcontrol input{
+    height: 5px;
+    width: 100%;
+}
+.progressbar{
+    display: flex;
+    justify-content: center;
+    grid-column-start: 1;
+    grid-column-end: 16;
+}
+.progressbar input{
+    width: 500px;
+    height: 6px;
+    margin-top: 5px;
+}
+.container{
+    grid-row-start: 1;
+    grid-row-end: 11;
+    grid-column-start: 5;
+    grid-column-end: 16;
+    margin: 5px 10px 5px 0;
+    overflow-y: scroll;
+
+}
+.playlist-head{
+    height: 334px;
+    
+    display: flex;
+    align-items: flex-end;
+    background:  linear-gradient(-203deg, #2f3132, transparent);
+}
+.thumb{
+    height: 235px;
+    width: 235px;
+    background-image: url('playlist-thumb/headphone.jpg');
+    background-size: cover;
+    margin: 20px 50px;
+
+}
+
+.thumb-title{
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+.thumb-title h1{
+    font-family: 'Belanosima', sans-serif;
+    font-size: 5rem;
+    margin: 15px 0;
+}
+
+.song-list,.song{
+    display:grid;
+    grid-template-columns:  50px 350px 225px 225px;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1rem;
+    color: #cccccc;
+    height: 65px;
+    padding: 8px;
+}
+.song:hover{
+    background-color:#2f3132;
+}
+.srno{
+    text-align: right;
+}
+
+.head-content{
+    display: flex;
+}
+.song-thumb.one{
+    background-image: url(songs/songthumb/saamne-wali-kheedki.jpg);
+}
+.song-thumb.two{
+    background-image: url(songs/songthumb/saari-ki-saari.jpg);
+}
+.song-thumb.three{
+    background-image: url(songs/songthumb/aankhonse-batana.jpg);
+}
+.song-thumb.four{
+    background-image: url(songs/songthumb/aise-kyun-ghazal.jpg);
+}
+.song-thumb.five{
+    background-image: url(songs/songthumb/man-bharaya.jpg);
+}
+.song-thumb.six{
+    background-image: url(songs/songthumb/memories.jpg);
+}
+.song-thumb.seven{
+    background-image: url(songs/songthumb/dandelions.jpg);
+}
+.song-thumb.eight{
+    background-image: url(songs/songthumb/nightchanges.jpg);
+}
+.song-thumb.nine{
+    background-image: url(songs/songthumb/two-of-us.jpg);
+}
+.song-thumb.ten{
+    background-image: url(songs/songthumb/eastside.jpg);
+}
+
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+::-webkit-scrollbar-track {
+    background: #000000e0;
+    opacity: .8;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: rgb(255 140 0 / 80%);
+    border:1px solid ;
+    display: none;
+    height:15px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: #db8f37;
+}
+
+

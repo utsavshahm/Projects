@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Utsav Shah">
+        <meta name="description" content="Course learning">
+        <meta name="robots" content="index, follow">
+        <link rel="stylesheet" href="sidenav.css">
+        <link rel="icon" href="/favicon.ico">
+        <link rel="icon" href="/favicon.svg">
+        <title>sidenav</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="content">Home</div>
+            <div class="content">Blog</div>
+            <div class="content">About</div>
+            <div class="content">Contact</div>
+        </div>
+        <button id="navcontrol" onclick="showNav()">Open Sidenav</button>
+
+
+        <script>
+            function showNav(){
+                let navbar=document.querySelector('.container');
+                navbar.style.left='0px';
+                
+                document.getElementById('navcontrol').setAttribute('onclick','closeNav()');
+                document.getElementById('navcontrol').innerHTML='Close Sidenav';
+
+            }
+            function closeNav(){
+                let navbar=document.querySelector('.container');
+                navbar.style.left='-205px';
+                
+                document.getElementById('navcontrol').setAttribute('onclick','showNav()');
+                document.getElementById('navcontrol').innerHTML='Open Sidenav';
+            }
+        </script>
+    </body>
+</html>

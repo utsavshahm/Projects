@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Utsav Shah">
+        <meta name="description" content="Course learning">
+        <meta name="robots" content="index, follow">
+        <link rel="stylesheet" href="spotify.css">
+        <link rel="icon" href="/favicon.ico">
+        <link rel="icon" href="/favicon.svg">
+        <title>Spotify clone</title>
+    </head>
+    <body>
+        
+        <div class="main">
+            <div class="utils">
+
+                <div class="util-content">
+
+                    <div class="icon">
+                        <img src="icons/icons8-home.svg" alt="">
+                        <div class="iconInfo">Home</div>
+                    </div>
+                    <div class="icon">
+    
+                        <img src="icons/icons8-search.svg" alt="" >
+                        <div class="iconInfo">Search</div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="library">
+                <div class="head-playlist">
+                    <div class="icon">
+                        <img src="icons/icons8-playlist-32.png" alt="">
+                        <div class="iconInfo">Your Library</div>
+                    </div>
+
+                    <div class="icon" id="plus">
+                        <img src="icons/icons8-plus-30.png" alt="">
+                    </div>
+                    <div class="icon"><img src="icons/icons8-right-arrow-30.png" alt=""></div>
+                </div>
+
+                <div class="main-list">
+                    <div class="playlist">
+                        <div class="thumbnail one"></div>
+                        <div class="playlist-content">
+                            <h3>Liked Songs</h3>
+                            <p>Playlist  &#183; 4 songs</p>
+                        </div>
+                    </div>
+                    <div class="playlist">
+                        <div class="thumbnail two"></div>
+                        <div class="playlist-content">
+                            <h3>Your Episodes</h3>
+                            <p>Saved & downloaded episodes</p>
+                        </div>
+                    </div>
+                    <div class="playlist">
+                        <div class="thumbnail three"></div>
+                        <div class="playlist-content">
+                            <h3>Utsav</h3>
+                            <p>Playlist  &#183; Utsav Shah!</p>
+                        </div>
+                    </div>
+                    <div class="playlist">
+                        <div class="thumbnail four"></div>
+                        <div class="playlist-content">
+                            <h3>English Love</h3>
+                            <p>Playlist  &#183; Utsav Shah </p>
+                        </div>
+                    </div>
+                    <div class="playlist">
+                        <div class="thumbnail five"></div>
+                        <div class="playlist-content">
+                            <h3>Gita for the Young and Restless</h3>
+                            <p>Podcast  &#183; Spotify Studios</p>
+                        </div>
+                    </div>
+                    <div class="playlist ">
+                        <div class="thumbnail six"></div>
+                        <div class="playlist-content">
+                            <h3>Khudgharz Official</h3>
+                            <p>Artist</p>
+                        </div>
+                    </div>
+                    <div class="playlist">
+                        <div class="thumbnail seven"></div>
+                        <div class="playlist-content">
+                            <h3>Stories with Abhash Jha</h3>
+                            <p>Podcast  &#183; Abhash Jha</p>
+                        </div>
+                    </div>
+                    <div class="playlist">
+                        <div class="thumbnail eight"></div>
+                        <div class="playlist-content">
+                            <h3>Anuv Jain</h3>
+                            <p>Artist</p>
+                        </div>
+                    </div>
+                    <div class="playlist">
+                        <div class="thumbnail nine"></div>
+                        <div class="playlist-content">
+                            <h3>Atif Aslam</h3>
+                            <p>Artist</p>
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </div>
+            
+            <div class="player">
+                <div class="songInfo" ></div>
+                <div class="controls">
+                    <div class="icon control" ><img src="icons/icons8-shuffle-24.png" alt="" id="shuffle"></div>
+                    <div class="icon control" id="previous"><img src="icons/icons8-previous-30.png" alt=""></div>
+                    <div class="icon control" id="play"><img src="icons/icons8-play-50.png" alt=""></div>
+                    <div class="icon control" id="next"><img src="icons/icons8-next-30.png" alt=""></div>
+                    <div class="icon control"><img src="icons/icons8-loop-30.png" alt="" id="loop"></div>
+                </div>
+                <div class="extracontrols">
+
+                    <div class="icon control"><img src="icons/icons8-list-32.png" alt=""></div>
+                    <div class="icon control"><img src="icons/icons8-laptop-and-phone-64.png" alt=""></div>
+                    <div class="icon control"><img src="icons/icons8-sound-30.png" alt=""></div>
+                    <div class="soundcontrol"><input type="range" id="soundcontrol" value="100"></div>
+                </div>
+            </div>
+            <div class="progressbar" >
+                <input type="range" id="progressbar" value="0">
+            </div>
+            
+
+            <div class="container">
+                <div class="playlist-head">
+                    <div class="thumb"></div>
+                    <div class="thumb-title">
+                        <p>Playlist</p>
+                        <h1>Utsav</h1>
+                        <p id="songsAndDur"></p>
+                    </div>
+                </div>
+
+                <div class="song-list">
+
+                    <div class="head-content srno" >#</div>
+                    <div class="head-content" id="title">Title</div>
+                    <div class="head-content" id="album">Album</div>
+                    <div class="head-content" id="duration">Duration</div>
+                    
+                </div>
+
+                <div class="song">
+                    <div class="head-content srno" >1</div>
+                    <div class="head-content preview" >
+                        <div class="song-thumb one"></div>
+                        <div class="song-content">
+                            <h4>Mere Saamne Wali Khidki</h4>
+                            <p>Karan Nawani</p>
+                        </div>
+                    </div>
+                    <div class="head-content">Saregama Music</div>
+                    <div class="head-content" >2:55</div>
+                </div>
+
+                <div class="song">
+                    <div class="head-content srno" >2</div>
+                    <div class="head-content preview" >
+                        <div class="song-thumb two"></div>
+                        <div class="song-content">
+                            <h4>Saari Ki Saari</h4>
+                            <p>Darshan Raval</p>
+                        </div>
+                    </div>
+                    <div class="head-content">Saari ki Saari</div>
+                    <div class="head-content" >4:08</div>
+                </div>
+
+                <div class="song">
+                    <div class="head-content srno" >3</div>
+                    <div class="head-content preview" >
+                        <div class="song-thumb three"></div>
+                        <div class="song-content">
+                            <h4>Aankhon se Batana</h4>
+                            <p>Dikshant</p>
+                        </div>
+                    </div>
+                    <div class="head-content">Dikshant</div>
+                    <div class="head-content" >3:43</div>
+                </div>
+
+                <div class="song">
+                    <div class="head-content srno" >4</div>
+                    <div class="head-content preview" >
+                        <div class="song-thumb four"></div>
+                        <div class="song-content">
+                            <h4>Aise Kyun (Ghazal Version)</h4>
+                            <p>Rekha Bharadwaj</p>
+                        </div>
+                    </div>
+                    <div class="head-content">Mismatched</div>
+                    <div class="head-content" >5:29</div>
+                </div>
+
+                <div class="song">
+                    <div class="head-content srno" >5</div>
+                    <div class="head-content preview" >
+                        <div class="song-thumb five"></div>
+                        <div class="song-content">
+                            <h4>Man Bharaya 2.0</h4>
+                            <p>B.Praak</p>
+                        </div>
+                    </div>
+                    <div class="head-content">Shershah</div>
+                    <div class="head-content" >4:26</div>
+                </div>
+
+                <div class="song">
+                    <div class="head-content srno" ></div>
+                    <div class="head-content preview" >
+                        <div class="song-thumb six"></div>
+                        <div class="song-content">
+                            <h4>Memories</h4>
+                            <p>Maroon 5</p>
+                        </div>
+                    </div>
+                    <div class="head-content">Maroon</div>
+                    <div class="head-content" >3:05</div>
+                </div>
+                <div class="song">
+                    <div class="head-content srno" >7</div>
+                    <div class="head-content preview" >
+                        <div class="song-thumb seven"></div>
+                        <div class="song-content">
+                            <h4>Dandelions</h4>
+                            <p>Ruth B.</p>
+                        </div>
+                    </div>
+                    <div class="head-content">Safe Heaven</div>
+                    <div class="head-content" >3:48</div>
+                </div>
+                <div class="song">
+                    <div class="head-content srno" >8</div>
+                    <div class="head-content preview" >
+                        <div class="song-thumb eight"></div>
+                        <div class="song-content">
+                            <h4>Night Changes</h4>
+                            <p>One Direction</p>
+                        </div>
+                    </div>
+                    <div class="head-content">FOUR(Deluxe)</div>
+                    <div class="head-content" >3:46</div>
+                </div>
+                <div class="song">
+                    <div class="head-content srno" >9</div>
+                    <div class="head-content preview" >
+                        <div class="song-thumb nine"></div>
+                        <div class="song-content">
+                            <h4>Two Of Us</h4>
+                            <p>Louis Tomlinson</p>
+                        </div>
+                    </div>
+                    <div class="head-content">Two Of Us</div>
+                    <div class="head-content" >3:42</div>
+                </div>
+                <div class="song">
+                    <div class="head-content srno" >10</div>
+                    <div class="head-content preview" >
+                        <div class="song-thumb ten"></div>
+                        <div class="song-content">
+                            <h4>EastSide</h4>
+                            <p>Halsey and Khalid</p>
+                        </div>
+                    </div>
+                    <div class="head-content">FRIENDS KEEP SECRETS</div>
+                    <div class="head-content" >2:56</div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <script src="spotify.js"></script>
+
+
+        
+    </body>
+</html>

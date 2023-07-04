@@ -1,0 +1,49 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: fit-content;
+    border: 2px solid;
+    position: relative;
+    left: 550px;
+    top: 200px;
+    background: #000;
+}
+.rows{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+    color: white;
+    
+}
+.content{
+    display: flex;
+    font-size: 25px;
+    border: 2px solid white;
+    padding: 15px 30px;
+    margin: 5px;
+    border-radius: 8px;
+    transition: all 0.1s;
+    font-weight: 600;
+}
+.content:hover{
+    cursor: pointer;
+    background-color: #1d1c1c;
+    border: 2px solid orange;
+}
+
+input{
+    background-color: #1d1c1c;
+    height: 70px;
+    width: 100%;
+    color: white;
+    outline: none;
+    margin: 5px 5px;
+    padding: 0 15px;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-size: 25px;
+
+
+}
