@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@600&family=Lexend+Deca:wght@100&family=Raleway:wght@500&family=Varela+Round&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Add a media query for smaller screens */
+@media (max-width: 768px) {
+  .main{
+    width:max-content;
+    grid-template-columns: repeat(8,110px);
+
+  }
+  .utils{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    
+  }
+  .library{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    
+  }
+  .container{
+    grid-column-start: 4;
+    grid-column-end: 16;
+    margin-right:0;
+  }
+
+  .iconInfo{
+    font-size:1.1rem
+  }
+  .icon img{
+    height: 28px;
+    width: 28px;
+  }
+  .thumbnail,.song-thumb{
+    height: 50px;
+    width: 50px;
+  }
+  .playlist{
+    height: 75px;
+}
+  .playlist-content{
+    font-size: 0.9rem;
+    padding-right:5px;
+    
+  }
+  .playlist-content h3{
+    font-size: 1rem;
+    padding-right:5px;
+    margin-bottom:6px
+    
+  }
+
+  .player{
+    width:max-content;
+  }
+  .song-list,.song{
+    display:grid;
+    grid-template-columns:  50px 400px 250px 80px;
+  }
+}
+
+/* Add more media queries and adjust styles as needed for other screen sizes */
+@media(max-width: 425px){
+  .main{
+/*     height:272vh; */
+    margin:0;
+    padding:5px 3px 0 5px;
+    width:100vw;
+    height:100vh;
+    grid-template-rows: auto;
+  }
+  .library,.utils{
+    display:none;
+  }
+  .container{
+    height:100vh;
+    grid-column-start: 1;
+/*     grid-column-end: 16; */
+    grid-row-end:10;
+    margin-right:0;
+    width:100vw
+  }
+  .playlist-head{
+    height: 70vh
+  }
+  .thumb{
+    height: 50vh;
+    width: 50vh;
+  }
+  .thumb-title{
+    font-size:3rem;
+  }
+  
+  .player{
+/*     grid-row-start:13; */
+/*     grid-row-end:13; */
+/*   width:max-content; */
+    height:22vh;
+    font-size:1.2rem;
+    width:100vw;
+/*     position:absolute;
+    bottom:0 */
+    
+  }
+  .song,.song-list{
+    height: 25vh;
+    font-size:2.5rem;
+    display:grid;
+    grid-template-columns:  5vw 130vw 0 20vw;
+    margin-bottom:4rem
+    
+  }
+  .alb{
+    display:none;
+  }
+  .progressbar{
+    
+    grid-row-start:14;
+    grid-row-end:14;
+    grid-column-start: 1;
+    grid-column-end: 16;
+    height:4vh;
+  }
+  .extracontrols{
+    display:none;
+  }
+  .controls{
+    width:200vw;
+    height:20vh;
+  }
+}
