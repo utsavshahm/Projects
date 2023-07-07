@@ -6,7 +6,6 @@
   box-sizing: border-box;
 }
 
-/* Add a media query for smaller screens */
 @media (max-width: 768px) {
   .main{
     width:max-content;
@@ -64,55 +63,52 @@
   }
 }
 
-/* Add more media queries and adjust styles as needed for other screen sizes */
+
 @media(max-width: 425px){
   .main{
-/*     height:272vh; */
+    grid-template-columns:auto;
     margin:0;
     padding:5px 3px 0 5px;
-    width:100vw;
-    height:100vh;
+    width:401vw;
+    height:400vh;
     grid-template-rows: auto;
   }
   .library,.utils{
     display:none;
   }
   .container{
-    height:100vh;
+
+    width:400vw;
     grid-column-start: 1;
-/*     grid-column-end: 16; */
     grid-row-end:10;
     margin-right:0;
-    width:100vw
+    
   }
   .playlist-head{
-    height: 70vh
+    height: 120vh
   }
   .thumb{
-    height: 50vh;
-    width: 50vh;
+    height: 100vh;
+    width: 100vh;
   }
   .thumb-title{
-    font-size:3rem;
+    font-size:4rem;
   }
   
   .player{
-/*     grid-row-start:13; */
-/*     grid-row-end:13; */
-/*   width:max-content; */
-    height:22vh;
+
+    height:30vh;
     font-size:1.2rem;
-    width:100vw;
-/*     position:absolute;
-    bottom:0 */
+    width:inherit;
+    padding-bottom:15vh
     
   }
   .song,.song-list{
-    height: 25vh;
-    font-size:2.5rem;
+    height: 35vh;
+    font-size:3rem;
     display:grid;
-    grid-template-columns:  5vw 130vw 0 20vw;
-    margin-bottom:4rem
+    grid-template-columns:  5vw 200vw 0 20vw;
+    margin-bottom:3.5rem
     
   }
   .alb{
@@ -122,15 +118,40 @@
     
     grid-row-start:14;
     grid-row-end:14;
-    grid-column-start: 1;
-    grid-column-end: 16;
     height:4vh;
+    justify-content:right;
+    margin-right:10vw;
+    padding-bottom:10vh
+  }
+  .progressbar input{
+    width:200vw
   }
   .extracontrols{
     display:none;
   }
   .controls{
+    margin-top:10vh;
     width:200vw;
-    height:20vh;
+  }
+  .songInfo{
+    display: flex;
+    height: 20vh;
+    width: fit-content;
+
+    font-size:2.3rem;
+    margin-left: 0px;
+    margin-top: 20vh;
+  }
+
+  .control img{
+    height:15vh;
+    width:15vw;
+    margin-right:15vw;
+  }
+  .song-thumb{
+    height: 30vh;
+    width: 30vh;
+    margin-right:10vh;
+ 
   }
 }
