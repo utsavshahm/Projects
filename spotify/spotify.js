@@ -90,21 +90,30 @@ play.addEventListener('click',()=>{
 
 // Event listener to next button
 nextSong.addEventListener('click',()=>{
-
-        let currSong=check[0].getAttribute('src'); // getting current song address
-        let currIndex=songs.indexOf(currSong); // to get the index of current song in song list
-        currIndex++; // increasing index by one to play next song
-        changeSong(currIndex); // changing song function
+        if(shuffle.style.backgroundColor=='green'){
+            shufflePlay(); // If shuffle is on, then next button will also play random song
+        }
+        else{
+            
+            let currSong=check[0].getAttribute('src'); // getting current song address
+            let currIndex=songs.indexOf(currSong); // to get the index of current song in song list
+            currIndex++; // increasing index by one to play next song
+            changeSong(currIndex); // changing song function
+        }
 })
 
 // Event listener to previous button
 
 prevSong.addEventListener('click',()=>{
-
-    let currSong=check[0].getAttribute('src');
-    let currIndex=songs.indexOf(currSong);
-    currIndex--;
-    changeSong(currIndex);
+    if(shuffle.style.backgroundColor=='green'){
+            shufflePlay(); // If shuffle is on, then previous button will also play random song
+    }
+    else{
+        let currSong=check[0].getAttribute('src');
+        let currIndex=songs.indexOf(currSong);
+        currIndex--;
+        changeSong(currIndex);
+    }
    
 })
 
