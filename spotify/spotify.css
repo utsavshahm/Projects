@@ -110,11 +110,12 @@ img:hover{
 .thumbnail,.song-thumb{
     height: 60px;
     width: 60px;
-    background-size: fill;
+    background:round;
     margin: 0 15px;
     border: 10px white;
     border-radius: 10px;
 }
+
 .thumbnail.one{
     background-image: url('playlist-thumb/likedsong.jpg');
 
